@@ -1,0 +1,23 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="630" fill="#020617"/>
+  <circle cx="147" cy="127" r="170" fill="#1E3A8A" fill-opacity="0.35"/>
+  <circle cx="1016" cy="110" r="196" fill="#0891B2" fill-opacity="0.25"/>
+  <circle cx="906" cy="578" r="220" fill="#16A34A" fill-opacity="0.18"/>
+  <rect x="72" y="90" width="1056" height="450" rx="34" fill="#0F172A" fill-opacity="0.88" stroke="#334155"/>
+  <text x="186" y="235" fill="#BAE6FD" font-family="Arial, sans-serif" font-size="34" letter-spacing="7">LOCAL GROWTH</text>
+  <text x="186" y="325" fill="#F8FAFC" font-family="Arial, sans-serif" font-size="74" font-weight="700">Local SEO Wiser</text>
+  <text x="186" y="395" fill="#CBD5E1" font-family="Arial, sans-serif" font-size="36">Rank Higher on Google Maps</text>
+  <text x="186" y="450" fill="#CBD5E1" font-family="Arial, sans-serif" font-size="36">Turn Local Searches Into Customers</text>
+  <rect x="846" y="196" width="170" height="170" rx="38" fill="#020617" stroke="#334155"/>
+  <path d="M931 221C901.729 221 878 244.729 878 274C878 313.596 931 347.85 931 347.85C931 347.85 984 313.596 984 274C984 244.729 960.271 221 931 221Z" stroke="url(#pin)" stroke-width="5"/>
+  <circle cx="925" cy="272" r="16" stroke="#D9F7FF" stroke-width="4"/>
+  <path d="M946 292L972 266" stroke="#4ADE80" stroke-width="5" stroke-linecap="round"/>
+  <path d="M961 266H972V277" stroke="#4ADE80" stroke-width="5" stroke-linecap="round"/>
+  <defs>
+    <linearGradient id="pin" x1="878" y1="221" x2="984" y2="347.85" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#60A5FA"/>
+      <stop offset="0.5" stop-color="#22D3EE"/>
+      <stop offset="1" stop-color="#4ADE80"/>
+    </linearGradient>
+  </defs>
+</svg>

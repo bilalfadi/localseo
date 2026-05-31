@@ -1,0 +1,21 @@
+<svg width="560" height="140" viewBox="0 0 560 140" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="560" height="140" rx="24" fill="#020617"/>
+  <rect x="18" y="18" width="104" height="104" rx="24" fill="url(#bg)"/>
+  <path d="M70 35C52.3269 35 38 49.3269 38 67C38 90.9158 70 111.6 70 111.6C70 111.6 102 90.9158 102 67C102 49.3269 87.6731 35 70 35Z" stroke="url(#pin)" stroke-width="4"/>
+  <circle cx="66.5" cy="65.7" r="9.8" stroke="#D9F7FF" stroke-width="3.6"/>
+  <path d="M76.1 76.5L92.9 59.6" stroke="#4ADE80" stroke-width="4.2" stroke-linecap="round"/>
+  <path d="M85.5 59.7H92.8V67.2" stroke="#4ADE80" stroke-width="4.2" stroke-linecap="round"/>
+  <text x="144" y="56" fill="#BAE6FD" font-family="Arial, sans-serif" font-size="16" letter-spacing="4">LOCAL GROWTH</text>
+  <text x="144" y="98" fill="#F8FAFC" font-family="Arial, sans-serif" font-size="40" font-weight="700">Local SEO Wiser</text>
+  <defs>
+    <linearGradient id="bg" x1="18" y1="18" x2="122" y2="122" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0F172A"/>
+      <stop offset="1" stop-color="#020617"/>
+    </linearGradient>
+    <linearGradient id="pin" x1="38" y1="35" x2="102" y2="111.6" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#60A5FA"/>
+      <stop offset="0.5" stop-color="#22D3EE"/>
+      <stop offset="1" stop-color="#4ADE80"/>
+    </linearGradient>
+  </defs>
+</svg>
