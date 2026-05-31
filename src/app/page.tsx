@@ -2,13 +2,15 @@ import type { Metadata } from "next";
 import { buildMetadata } from "@/lib/seo";
 import { HomeContent } from "@/components/home-content";
 
-export const metadata: Metadata = buildMetadata({
-  title: "Local SEO Wiser | Rank Higher on Google Maps",
-  description:
-    "Turn local searches into customers with Local SEO Wiser. Discover premium local SEO services, reporting, and growth strategies for ambitious local brands.",
-  path: "/",
-  keywords: ["local seo", "google maps ranking", "local business marketing"],
-});
+export async function generateMetadata(): Promise<Metadata> {
+  return buildMetadata({
+    title: "Local SEO Wiser | Rank Higher on Google Maps",
+    description:
+      "Turn local searches into customers with Local SEO Wiser. Discover premium local SEO services, reporting, and growth strategies for ambitious local brands.",
+    path: "/",
+    keywords: ["local seo", "google maps ranking", "local business marketing"],
+  });
+}
 
 export default function Home() {
   const faqSchema = {

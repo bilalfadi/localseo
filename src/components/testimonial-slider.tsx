@@ -20,14 +20,12 @@ export function TestimonialSlider({ items }: { items: Testimonial[] }) {
     <div className="glass-card overflow-hidden rounded-[30px] border border-slate-700/60 bg-slate-950/70 p-6 md:p-8">
       <div className="grid gap-6 lg:grid-cols-[1fr_auto] lg:items-start">
         <div>
-          <p className="text-xs font-semibold uppercase tracking-[0.24em] text-cyan-300/95">Loved by users</p>
-          <h3 className="mt-2 text-3xl font-semibold text-white md:text-5xl">Why customers keep choosing us</h3>
           <motion.p
             key={current.name}
             initial={{ opacity: 0, y: 8 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.35 }}
-            className="mt-4 max-w-3xl text-lg leading-8 text-slate-200"
+            className="max-w-3xl text-lg leading-8 text-slate-200 md:text-xl"
           >
             &ldquo;{current.quote}&rdquo;
           </motion.p>
@@ -73,9 +71,9 @@ export function TestimonialSlider({ items }: { items: Testimonial[] }) {
                 <Star key={`${item.name}-${star}`} size={15} fill="currentColor" />
               ))}
             </div>
-            <h4 className="mt-3 text-lg font-semibold text-white">
+            <h3 className="mt-3 text-lg font-semibold text-white">
               {item.name} <span className="text-base">{item.flag}</span>
-            </h4>
+            </h3>
             <p className="text-sm text-cyan-100/85">{item.role}</p>
             <p className="mt-3 text-base leading-7 text-slate-200">&ldquo;{item.quote}&rdquo;</p>
           </article>

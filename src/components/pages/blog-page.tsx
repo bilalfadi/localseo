@@ -23,6 +23,7 @@ export function BlogPageContent() {
         description="Our blog shares practical tactics, strategic frameworks, and campaign lessons to help local businesses improve visibility and lead quality."
       />
       <section className="section-shell pb-16">
+        <h2 className="sr-only">Latest local SEO articles</h2>
         <div className="grid gap-5 md:grid-cols-2 xl:grid-cols-3">
           {blogPosts.map((post, index) => (
             <Reveal key={post.slug} delay={index * 0.08}>
@@ -40,7 +41,7 @@ export function BlogPageContent() {
                   <span className="rounded-full bg-slate-950/80 px-3 py-1 text-xs font-semibold text-cyan-200">
                     {post.category}
                   </span>
-                  <h2 className="mt-4 text-xl font-semibold text-white">{post.title}</h2>
+                  <h3 className="mt-4 text-xl font-semibold text-white">{post.title}</h3>
                 </div>
                 <p className="text-sm leading-6 text-slate-300">{post.excerpt}</p>
                 <div className="mt-4 flex items-center justify-between text-xs text-slate-400">

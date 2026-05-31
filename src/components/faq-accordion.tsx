@@ -17,16 +17,19 @@ export function FaqAccordion({
         const open = active === index;
         return (
           <div key={item.question} className="glass-card rounded-2xl p-5">
-            <button
-              onClick={() => setActive(open ? -1 : index)}
-              className="flex w-full items-center justify-between gap-4 text-left"
-            >
-              <span className="text-base font-semibold text-white">{item.question}</span>
-              <ChevronDown
-                size={18}
-                className={`text-cyan-300 transition-transform ${open ? "rotate-180" : ""}`}
-              />
-            </button>
+            <h3 className="text-base font-semibold text-white">
+              <button
+                type="button"
+                onClick={() => setActive(open ? -1 : index)}
+                className="flex w-full items-center justify-between gap-4 text-left"
+              >
+                <span>{item.question}</span>
+                <ChevronDown
+                  size={18}
+                  className={`shrink-0 text-cyan-300 transition-transform ${open ? "rotate-180" : ""}`}
+                />
+              </button>
+            </h3>
             <AnimatePresence initial={false}>
               {open && (
                 <motion.p

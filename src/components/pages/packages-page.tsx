@@ -14,11 +14,12 @@ export function PackagesPageContent() {
       />
 
       <section className="section-shell pb-14">
+        <h2 className="sr-only">Local SEO package options</h2>
         <div className="grid gap-5 md:grid-cols-3">
           {packages.map((item, index) => (
             <Reveal key={item.title} delay={index * 0.08}>
               <article className="glass-card h-full rounded-3xl p-6">
-                <h2 className="text-2xl font-semibold text-white">{item.title}</h2>
+                <h3 className="text-2xl font-semibold text-white">{item.title}</h3>
                 <p className="mt-3 text-sm text-slate-300">{item.focus}</p>
                 <ul className="mt-5 space-y-3 text-sm text-slate-200">
                   {item.features.map((feature) => (
@@ -64,9 +65,9 @@ export function PackagesPageContent() {
                 ].map(([feature, starter, growth, advanced]) => (
                   <tr key={feature as string} className="border-t border-slate-700/60">
                     <td className="py-3 pr-4">{feature}</td>
-                    <td className="py-3 pr-4">{starter ? "✓" : "—"}</td>
-                    <td className="py-3 pr-4">{growth ? "✓" : "—"}</td>
-                    <td className="py-3 pr-4">{advanced ? "✓" : "—"}</td>
+                    <td className="py-3 pr-4">{starter ? "✓" : "✕"}</td>
+                    <td className="py-3 pr-4">{growth ? "✓" : "✕"}</td>
+                    <td className="py-3 pr-4">{advanced ? "✓" : "✕"}</td>
                   </tr>
                 ))}
               </tbody>

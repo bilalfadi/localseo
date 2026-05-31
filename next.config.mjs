@@ -27,6 +27,19 @@ const nextConfig = {
       "review-management-playbook",
     ];
     const serviceSlugs = [
+      "local-seo",
+      "google-map-optimization",
+      "seo-for-small-business",
+      "local-business-citation",
+      "landing-page-optimization",
+      "technical-seo",
+      "ppc-advertising",
+      "google-ads",
+      "wordpress-development",
+      "shopify-development",
+      "bricks-builder-development",
+      "social-media-management",
+      "crm-development",
       "google-business-profile-optimization",
       "local-citation-building",
       "review-management",
@@ -35,6 +48,14 @@ const nextConfig = {
     return [
       { source: "/about-us", destination: "/about", permanent: true },
       { source: "/contact-us", destination: "/contact", permanent: true },
+      { source: "/4s-chemicals-local-seo", destination: "/portfolio", permanent: true },
+      {
+        source: "/google-business-profile-optimization",
+        destination: "/google-map-optimization",
+        permanent: true,
+      },
+      { source: "/local-citation-building", destination: "/local-business-citation", permanent: true },
+      { source: "/review-management", destination: "/social-media-management", permanent: true },
       ...portfolioSlugs.map((slug) => ({
         source: `/portfolio/${slug}`,
         destination: `/${slug}`,
