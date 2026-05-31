@@ -655,14 +655,17 @@ function PortfolioSection() {
       <div className="mt-7 grid gap-4 md:grid-cols-2 xl:grid-cols-3">
         {portfolioItems.slice(0, 3).map((item, index) => (
           <Reveal key={item.id} delay={index * 0.09}>
-            <article className="glass-card flex h-full min-h-[360px] flex-col rounded-2xl p-5">
+            <Link
+              href={`/portfolio/${item.slug}`}
+              className="glass-card group flex h-full min-h-[360px] flex-col rounded-2xl p-5 transition hover:border-cyan-300/40"
+            >
               <div className="mb-4 overflow-hidden rounded-2xl border border-slate-700/70">
                 <Image
                   src={portfolioThumbs[index]}
                   alt={`${item.businessType} portfolio thumbnail`}
                   width={700}
                   height={420}
-                  className="h-40 w-full object-cover"
+                  className="h-40 w-full object-cover transition duration-300 group-hover:scale-[1.03]"
                 />
               </div>
               <div className="min-h-[98px] rounded-2xl border border-cyan-300/30 bg-gradient-to-br from-blue-500/20 via-cyan-500/10 to-green-500/20 p-4">
@@ -671,10 +674,14 @@ function PortfolioSection() {
                   {item.businessType} {item.flag}
                 </h3>
               </div>
-              <p className="mt-4 min-h-[56px] text-sm text-slate-300">
+              <p className="mt-4 min-h-[56px] flex-1 text-sm text-slate-300">
                 <span className="font-semibold text-slate-100">Result:</span> {item.result}
               </p>
-            </article>
+              <span className="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-cyan-200 transition group-hover:text-cyan-100">
+                View case study
+                <ArrowRight size={16} className="transition group-hover:translate-x-1" />
+              </span>
+            </Link>
           </Reveal>
         ))}
       </div>

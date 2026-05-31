@@ -93,9 +93,38 @@ export const processSteps = [
   },
 ];
 
-export const portfolioItems = [
+export const portfolioVisuals: Record<string, string> = {
+  "Google Business Profile":
+    "https://images.unsplash.com/photo-1562577309-4932fdd64cd1?auto=format&fit=crop&w=1200&q=80",
+  "Local SEO Campaigns":
+    "https://images.unsplash.com/photo-1553877522-43269d4ea984?auto=format&fit=crop&w=1200&q=80",
+  "Citation Building":
+    "https://images.unsplash.com/photo-1559028012-481c04fa702d?auto=format&fit=crop&w=1200&q=80",
+  "Review Management":
+    "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&w=1200&q=80",
+  "Website SEO":
+    "https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?auto=format&fit=crop&w=1200&q=80",
+  "Multi Location SEO":
+    "https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=1200&q=80",
+};
+
+export type PortfolioItem = {
+  id: number;
+  slug: string;
+  category: string;
+  businessType: string;
+  flag: string;
+  service: string;
+  goal: string;
+  completed: string;
+  result: string;
+  summary: string;
+};
+
+export const portfolioItems: PortfolioItem[] = [
   {
     id: 1,
+    slug: "dental-clinic-gbp",
     category: "Google Business Profile",
     businessType: "Dental Clinic",
     flag: "🇺🇸",
@@ -103,9 +132,12 @@ export const portfolioItems = [
     goal: "Increase calls from nearby searches",
     completed: "Category refinement, treatment pages, weekly post cadence, photo strategy",
     result: "Map pack visibility improved by 61% in 90 days.",
+    summary:
+      "We rebuilt the clinic's Google Business Profile around high-intent treatment searches and local trust signals, then maintained a weekly publishing rhythm to keep the listing active and conversion-ready.",
   },
   {
     id: 2,
+    slug: "family-law-local-seo",
     category: "Local SEO Campaigns",
     businessType: "Family Law Firm",
     flag: "🇬🇧",
@@ -113,9 +145,12 @@ export const portfolioItems = [
     goal: "Grow consultation requests",
     completed: "City intent keyword mapping, FAQ content, authority cleanup",
     result: "Qualified leads grew 43% quarter over quarter.",
+    summary:
+      "This campaign focused on city-level intent pages, FAQ-led content, and authority cleanup so the firm could compete for consultation searches without relying on broad national keywords.",
   },
   {
     id: 3,
+    slug: "hvac-citation-sync",
     category: "Citation Building",
     businessType: "HVAC Contractor",
     flag: "🇨🇦",
@@ -123,9 +158,12 @@ export const portfolioItems = [
     goal: "Fix NAP consistency issues",
     completed: "58 citation corrections and 34 new high-value listings",
     result: "Discovery searches increased by 52%.",
+    summary:
+      "The contractor had inconsistent business data across dozens of directories. We corrected existing listings, expanded into relevant local sources, and stabilized NAP consistency across the network.",
   },
   {
     id: 4,
+    slug: "medical-clinic-reviews",
     category: "Review Management",
     businessType: "Medical Clinic",
     flag: "🇦🇺",
@@ -133,9 +171,12 @@ export const portfolioItems = [
     goal: "Lift review volume and quality",
     completed: "Review request automation and sentiment-led response playbooks",
     result: "Average rating improved from 4.2 to 4.8.",
+    summary:
+      "We implemented a review request workflow tied to patient touchpoints and trained the team on response templates that improved trust while keeping replies personal and timely.",
   },
   {
     id: 5,
+    slug: "restaurant-website-seo",
     category: "Website SEO",
     businessType: "Neighborhood Restaurant Group",
     flag: "🇺🇸",
@@ -143,9 +184,12 @@ export const portfolioItems = [
     goal: "Drive reservation-ready traffic",
     completed: "Location schema, menu indexing, city landing pages",
     result: "Organic reservations increased 38%.",
+    summary:
+      "The restaurant group needed location pages and menu content that matched how nearby diners searched. We aligned on-page SEO, schema, and landing pages to support reservation intent.",
   },
   {
     id: 6,
+    slug: "real-estate-multi-location",
     category: "Multi Location SEO",
     businessType: "Real Estate Agency",
     flag: "🇳🇿",
@@ -153,8 +197,14 @@ export const portfolioItems = [
     goal: "Scale SEO across branches",
     completed: "Template system, branch pages, map entity alignment",
     result: "Top-3 ranking share doubled in six months.",
+    summary:
+      "We built a repeatable branch-page system with shared templates, localized content blocks, and map entity alignment so each office could rank without creating duplicate or thin location pages.",
   },
 ];
+
+export function getPortfolioItem(slug: string) {
+  return portfolioItems.find((item) => item.slug === slug);
+}
 
 export const testimonials = [
   {
