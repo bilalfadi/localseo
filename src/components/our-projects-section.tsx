@@ -2,8 +2,7 @@
 
 import { useMemo, useState } from "react";
 import Image from "next/image";
-import Link from "next/link";
-import { ArrowUpRight, ExternalLink, Globe2, MapPin } from "lucide-react";
+import { ExternalLink, Globe2 } from "lucide-react";
 import type { ProjectWebsite } from "@/lib/site-data";
 import { businessLocation } from "@/lib/site-data";
 
@@ -57,75 +56,57 @@ export function OurProjectsSection({ projects }: { projects: ProjectWebsite[] })
             ))}
           </div>
 
-          <div className="grid gap-5 md:grid-cols-2 xl:grid-cols-3">
+          <div className="grid gap-6 lg:grid-cols-2 2xl:grid-cols-3">
             {filtered.map((project) => (
-              <article
+              <a
                 key={project.id}
-                className="glass-card group flex h-full flex-col overflow-hidden rounded-2xl transition hover:border-cyan-300/40"
+                href={project.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={`Visit ${project.name} website`}
+                className="glass-card group flex h-full cursor-pointer flex-col overflow-hidden rounded-2xl transition hover:border-cyan-300/40"
               >
-                <div className="relative h-44 overflow-hidden border-b border-slate-700/70">
-                  {project.image ? (
-                    <Image
-                      src={project.image}
-                      alt={`${project.name} website preview`}
-                      fill
-                      className="object-cover object-top transition duration-300 group-hover:scale-[1.03]"
-                    />
-                  ) : (
-                    <div className="flex h-full items-center justify-center bg-gradient-to-br from-blue-700/30 via-slate-900 to-cyan-600/20">
-                      <Globe2 className="text-cyan-300/70" size={48} />
-                    </div>
-                  )}
-                  <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/30 to-transparent" />
-                  <div className="absolute bottom-0 left-0 right-0 p-4">
-                    <span className="inline-flex rounded-full border border-cyan-300/30 bg-slate-950/70 px-3 py-1 text-xs font-semibold uppercase tracking-[0.15em] text-cyan-200">
-                      {project.category}
-                    </span>
-                  </div>
-                </div>
-
-                <div className="flex flex-1 flex-col p-5">
-                  <h3 className="text-xl font-semibold text-white">{project.name}</h3>
-                  <p className="mt-1 inline-flex items-center gap-1.5 text-sm font-medium text-cyan-200">
-                    <MapPin size={14} />
-                    {project.location}
-                  </p>
-                  <p className="mt-1 text-sm text-slate-400">{project.domain}</p>
-                  <p className="mt-3 flex-1 text-sm leading-6 text-slate-300">{project.description}</p>
-
-                  <div className="mt-4 flex flex-wrap gap-2">
-                    {project.services.map((service) => (
-                      <span
-                        key={service}
-                        className="rounded-full border border-slate-700 bg-slate-900/60 px-3 py-1 text-xs font-medium text-slate-300"
-                      >
-                        {service}
+                <div className="block p-3 pb-0">
+                  <div className="overflow-hidden rounded-t-xl border border-slate-700/80 bg-slate-900 shadow-inner">
+                    <div className="flex items-center gap-2 border-b border-slate-700/80 bg-slate-800/90 px-3 py-2">
+                      <span className="flex gap-1">
+                        <span className="h-2.5 w-2.5 rounded-full bg-red-400/80" />
+                        <span className="h-2.5 w-2.5 rounded-full bg-amber-300/80" />
+                        <span className="h-2.5 w-2.5 rounded-full bg-emerald-400/80" />
                       </span>
-                    ))}
-                  </div>
-
-                  <div className="mt-5 flex flex-wrap items-center gap-3">
-                    <a
-                      href={project.url}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-flex items-center gap-2 rounded-full bg-cyan-400 px-4 py-2 text-sm font-semibold text-slate-950 transition hover:bg-cyan-300"
-                    >
-                      Visit website
-                      <ExternalLink size={15} />
-                    </a>
-                    {project.caseStudySlug ? (
-                      <Link
-                        href={`/${project.caseStudySlug}`}
-                        className="inline-flex items-center gap-2 text-sm font-semibold text-cyan-200 transition hover:text-cyan-100"
-                      >
-                        View case study
-                        <ArrowUpRight size={15} />
-                      </Link>
-                    ) : null}
+                      <span className="ml-1 truncate rounded-md bg-slate-950/60 px-2.5 py-0.5 text-[11px] text-slate-400">
+                        {project.domain}
+                      </span>
+                    </div>
+                    <div className="relative aspect-[16/12] bg-slate-950">
+                      {project.image ? (
+                        <Image
+                          src={project.image}
+                          alt={`${project.name} website preview`}
+                          fill
+                          sizes="(max-width: 1024px) 100vw, (max-width: 1536px) 50vw, 33vw"
+                          className="object-cover object-top transition duration-500 group-hover:scale-[1.02]"
+                        />
+                      ) : (
+                        <div className="flex h-full items-center justify-center bg-gradient-to-br from-blue-700/30 via-slate-900 to-cyan-600/20">
+                          <Globe2 className="text-cyan-300/70" size={48} />
+                        </div>
+                      )}
+                    </div>
                   </div>
                 </div>
-              </article>
+
+                <div className="flex items-center justify-between gap-3 p-4 pt-3">
+                  <div className="min-w-0">
+                    <h3 className="truncate text-base font-semibold text-white">{project.name}</h3>
+                    <p className="mt-1 truncate text-xs text-slate-400">{project.category} · {project.location}</p>
+                  </div>
+                  <ExternalLink
+                    size={16}
+                    className="shrink-0 text-cyan-300/70 transition group-hover:text-cyan-200"
+                  />
+                </div>
+              </a>
             ))}
           </div>
         </>

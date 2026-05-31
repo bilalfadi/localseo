@@ -418,19 +418,66 @@ export type ProjectWebsite = {
 };
 
 export const ourProjects: ProjectWebsite[] = [
-  // Add your website projects here, separate from the GSC portfolio case studies above.
-  // Example:
-  // {
-  //   id: 1,
-  //   name: "Client Website Name",
-  //   domain: "example.com",
-  //   url: "https://example.com/",
-  //   category: "Healthcare",
-  //   location: "Pittsburgh, Pennsylvania, United States",
-  //   description: "Short description of the website and work done.",
-  //   services: ["Local SEO", "Web Design"],
-  //   image: "/portfolio/projects/example.jpg",
-  // },
+  {
+    id: 1,
+    name: "D Pet Care",
+    domain: "dpetcare.ae",
+    url: "https://dpetcare.ae/",
+    category: "Pet Services",
+    location: "Dubai, United Arab Emirates",
+    description:
+      "Licensed in-home pet sitting website for Dubai pet owners, built to convert vacation and busy-work searches into booked visits with clear service pages, pricing, and trust signals.",
+    services: ["Web Design", "Local SEO", "WordPress"],
+    image: "/portfolio/projects/dpetcare-ae.jpg",
+  },
+  {
+    id: 2,
+    name: "Fil Xpat Cleaning",
+    domain: "filxpatcleaning.ae",
+    url: "https://filxpatcleaning.ae/",
+    category: "Cleaning Services",
+    location: "Dubai, United Arab Emirates",
+    description:
+      "Deep cleaning and home service website for residential and commercial clients across Dubai, Sharjah, and Ajman, with service funnels for same-day bookings and recurring visits.",
+    services: ["Web Design", "Local SEO", "Landing Pages"],
+    image: "/portfolio/projects/filxpatcleaning-ae.jpg",
+  },
+  {
+    id: 3,
+    name: "MBC Renovation",
+    domain: "mbcrenovation.ae",
+    url: "https://mbcrenovation.ae/",
+    category: "Renovation",
+    location: "Dubai, United Arab Emirates",
+    description:
+      "Renovation and fit-out brand website showcasing project credibility, service coverage, and lead capture for homeowners and commercial clients across the UAE.",
+    services: ["Web Design", "WordPress", "Lead Generation"],
+    image: "/portfolio/projects/mbcrenovation-ae.jpg",
+  },
+  {
+    id: 4,
+    name: "Yara Luxe Interiors",
+    domain: "yaraluxeinteriors.com.au",
+    url: "https://yaraluxeinteriors.com.au/",
+    category: "Interior Design",
+    location: "Bentleigh, Victoria, Australia",
+    description:
+      "Premium interior design studio website with portfolio galleries, testimonials, and consultation flows for residential and commercial design projects in Melbourne.",
+    services: ["Web Design", "Portfolio UX", "SEO"],
+    image: "/portfolio/projects/yaraluxeinteriors-au.jpg",
+  },
+  {
+    id: 5,
+    name: "SmFame",
+    domain: "smfame.us",
+    url: "https://smfame.us/",
+    category: "Social Media",
+    location: "United States",
+    description:
+      "Conversion-focused social growth website for US creators and businesses, structured around service packages, trust proof, FAQs, and fast checkout paths.",
+    services: ["Web Design", "Conversion UX", "Technical SEO"],
+    image: "/portfolio/projects/smfame-us.jpg",
+  },
 ];
 
 export const testimonials = [
