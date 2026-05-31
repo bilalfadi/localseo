@@ -16,7 +16,7 @@ export function PageHero({
   return (
     <section className="section-shell py-14 md:py-18">
       <Reveal>
-        <div className="relative overflow-hidden rounded-3xl border border-slate-700/50 bg-gradient-to-r from-blue-700/25 via-slate-900 to-cyan-600/20 px-7 py-10 md:px-10 md:py-12">
+        <div className="relative overflow-hidden rounded-3xl border border-slate-700/50 bg-gradient-to-r from-blue-700/25 via-slate-900 to-cyan-600/20 px-4 py-8 md:px-8 md:py-10">
           <Image
             src={pageHeroVisual}
             alt="Modern digital marketing workspace"

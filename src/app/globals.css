@@ -54,8 +54,14 @@ body {
 }
 
 .section-shell {
-  width: min(1200px, calc(100% - 2rem));
+  width: min(1440px, calc(100% - 1rem));
   margin-inline: auto;
+}
+
+@media (min-width: 768px) {
+  .section-shell {
+    width: min(1440px, calc(100% - 2rem));
+  }
 }
 
 .gradient-text {

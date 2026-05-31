@@ -223,7 +223,7 @@ function HeroSection() {
         transition={{ repeat: Infinity, duration: 9 }}
         className="absolute bottom-16 left-8 h-32 w-32 rounded-full bg-cyan-400/20 blur-2xl"
       />
-      <div className="relative overflow-hidden rounded-3xl border border-cyan-200/15 px-6 py-9 md:px-12 md:py-12">
+      <div className="relative overflow-hidden rounded-3xl border border-cyan-200/15 px-4 py-8 md:px-8 md:py-10">
         <div className="grid gap-8 lg:grid-cols-[1.08fr_0.92fr]">
           <Reveal>
             <div>
@@ -713,7 +713,7 @@ function FaqSection() {
 function FinalCta() {
   return (
     <section id="strategy-call" className="section-shell py-14">
-      <div className="relative overflow-hidden rounded-3xl border border-cyan-300/20 bg-gradient-to-r from-blue-700/40 via-cyan-600/25 to-green-600/30 p-7 md:p-10">
+      <div className="relative overflow-hidden rounded-3xl border border-cyan-300/20 bg-gradient-to-r from-blue-700/40 via-cyan-600/25 to-green-600/30 p-5 md:p-8">
         <Image
           src={visuals.cta}
           alt="Team strategy visual"

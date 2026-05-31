@@ -78,7 +78,7 @@ export default function BlogArticlePage({
 
   return (
     <main className="section-shell py-16">
-      <article className="glass-card rounded-3xl p-7 md:p-10">
+      <article className="glass-card rounded-3xl p-5 md:p-8">
         <p className="text-sm font-semibold uppercase tracking-[0.2em] text-cyan-200">{article.category}</p>
         <h1 className="mt-3 max-w-4xl text-3xl font-semibold text-white md:text-5xl">{article.title}</h1>
         <p className="mt-4 max-w-3xl text-base leading-7 text-slate-200">{article.description}</p>

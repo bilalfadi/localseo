@@ -30,7 +30,7 @@ export function ServicePageTemplate({
     <main>
       <section className="section-shell py-16 md:py-20">
         <Reveal>
-          <div className="relative overflow-hidden rounded-3xl border border-slate-700/50 bg-gradient-to-r from-blue-600/30 via-cyan-500/20 to-green-500/20 p-8 md:p-12">
+          <div className="relative overflow-hidden rounded-3xl border border-slate-700/50 bg-gradient-to-r from-blue-600/30 via-cyan-500/20 to-green-500/20 p-5 md:p-8">
             <Image
               src={heroVisual}
               alt="Local SEO service consultation session"
