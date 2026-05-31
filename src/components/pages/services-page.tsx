@@ -1,19 +1,9 @@
-import type { Metadata } from "next";
 import Link from "next/link";
 import { PageHero } from "@/components/page-hero";
 import { Reveal } from "@/components/reveal";
-import { buildMetadata } from "@/lib/seo";
 import { serviceCards } from "@/lib/site-data";
 
-export const metadata: Metadata = buildMetadata({
-  title: "Local SEO Services | Local SEO Wiser",
-  description:
-    "Explore Local SEO Wiser services including Google Business Profile optimization, citation building, review management, local content strategy, and reporting.",
-  path: "/services",
-  keywords: ["local seo services", "google business profile optimization", "citation management"],
-});
-
-export default function ServicesPage() {
+export function ServicesPageContent() {
   return (
     <main>
       <PageHero

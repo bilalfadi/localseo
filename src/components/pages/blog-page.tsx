@@ -1,10 +1,8 @@
-import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
 import { Clock3 } from "lucide-react";
 import { PageHero } from "@/components/page-hero";
 import { Reveal } from "@/components/reveal";
-import { buildMetadata } from "@/lib/seo";
 import { blogPosts } from "@/lib/site-data";
 
 const blogVisuals: Record<string, string> = {
@@ -16,15 +14,7 @@ const blogVisuals: Record<string, string> = {
     "https://images.unsplash.com/photo-1515169067868-5387ec356754?auto=format&fit=crop&w=1200&q=80",
 };
 
-export const metadata: Metadata = buildMetadata({
-  title: "Local SEO Blog | Local SEO Wiser Insights",
-  description:
-    "Read practical local SEO insights from Local SEO Wiser on Google Business Profile, citations, reviews, and conversion-focused local strategy.",
-  path: "/blog",
-  keywords: ["local seo blog", "google business profile tips", "citation strategy"],
-});
-
-export default function BlogPage() {
+export function BlogPageContent() {
   return (
     <main>
       <PageHero
@@ -63,7 +53,7 @@ export default function BlogPage() {
                   </span>
                 </div>
                 <Link
-                  href={`/blog/${post.slug}`}
+                  href={`/${post.slug}`}
                   className="mt-4 inline-block rounded-xl bg-slate-800 px-4 py-2 text-sm font-semibold text-cyan-200 transition hover:bg-slate-700"
                 >
                   Read Article

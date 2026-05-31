@@ -39,7 +39,7 @@ export function PortfolioFilter({ items }: { items: PortfolioItem[] }) {
         {filtered.map((item) => (
           <Link
             key={item.id}
-            href={`/portfolio/${item.slug}`}
+            href={`/${item.slug}`}
             className="glass-card group flex h-full flex-col rounded-2xl p-5 transition hover:border-cyan-300/40"
           >
             <div className="mb-4 overflow-hidden rounded-2xl border border-slate-700/70">

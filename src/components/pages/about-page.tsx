@@ -1,17 +1,7 @@
-import type { Metadata } from "next";
 import { PageHero } from "@/components/page-hero";
 import { Reveal } from "@/components/reveal";
-import { buildMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = buildMetadata({
-  title: "About Local SEO Wiser | Strategy-First Local SEO Team",
-  description:
-    "Meet Local SEO Wiser, a strategy-led local SEO team helping service businesses and multi-location brands grow visibility and qualified local demand.",
-  path: "/about-us",
-  keywords: ["about local seo wiser", "local seo agency team", "local search experts"],
-});
-
-export default function AboutUsPage() {
+export function AboutPageContent() {
   return (
     <main>
       <PageHero

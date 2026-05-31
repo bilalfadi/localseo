@@ -1,20 +1,10 @@
-import type { Metadata } from "next";
 import Link from "next/link";
 import { Check } from "lucide-react";
 import { PageHero } from "@/components/page-hero";
 import { Reveal } from "@/components/reveal";
-import { buildMetadata } from "@/lib/seo";
 import { packages } from "@/lib/site-data";
 
-export const metadata: Metadata = buildMetadata({
-  title: "Local SEO Packages | Local SEO Wiser",
-  description:
-    "Compare Starter, Growth, and Advanced Local SEO packages. Request a quote for a campaign tailored to your local growth goals.",
-  path: "/packages",
-  keywords: ["local seo packages", "seo pricing request quote", "local seo plans"],
-});
-
-export default function PackagesPage() {
+export function PackagesPageContent() {
   return (
     <main>
       <PageHero
@@ -39,7 +29,7 @@ export default function PackagesPage() {
                   ))}
                 </ul>
                 <Link
-                  href="/contact-us"
+                  href="/contact"
                   className="mt-6 inline-block rounded-xl bg-gradient-to-r from-blue-500 via-cyan-400 to-green-400 px-4 py-2 text-sm font-semibold text-slate-950"
                 >
                   Request a Quote

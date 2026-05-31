@@ -1,11 +1,11 @@
 export const navLinks = [
   { label: "Home", href: "/" },
-  { label: "About", href: "/about-us" },
+  { label: "About", href: "/about" },
   { label: "Services", href: "/services" },
   { label: "Packages", href: "/packages" },
   { label: "Portfolio", href: "/portfolio" },
   { label: "Blog", href: "/blog" },
-  { label: "Contact", href: "/contact-us" },
+  { label: "Contact", href: "/contact" },
 ];
 
 export const trustStats = [
@@ -20,19 +20,19 @@ export const serviceCards = [
     title: "Google Business Profile Optimization",
     description:
       "Convert your profile into a lead engine with stronger categories, service descriptions, photos, and offer posts.",
-    href: "/services/google-business-profile-optimization",
+    href: "/google-business-profile-optimization",
   },
   {
     title: "Local Citation Building",
     description:
       "Clean and expand business listings across trusted directories to reinforce location trust signals.",
-    href: "/services/local-citation-building",
+    href: "/local-citation-building",
   },
   {
     title: "Review Management",
     description:
       "Build a healthier review flow with response frameworks, request automations, and sentiment insights.",
-    href: "/services/review-management",
+    href: "/review-management",
   },
   {
     title: "Local Keyword Research",

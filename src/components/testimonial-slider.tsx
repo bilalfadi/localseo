@@ -83,7 +83,7 @@ export function TestimonialSlider({ items }: { items: Testimonial[] }) {
       </div>
       <div className="mt-7 flex justify-center">
         <a
-          href="/contact-us"
+          href="/contact"
           className="inline-flex text-base font-semibold text-cyan-200 underline decoration-cyan-300/60 underline-offset-4 hover:text-cyan-100"
         >
           See more reviews

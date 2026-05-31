@@ -1,20 +1,10 @@
-import type { Metadata } from "next";
 import Link from "next/link";
 import type { ReactNode } from "react";
 import { Clock3, Mail, MapPin, Phone } from "lucide-react";
 import { AuditForm } from "@/components/audit-form";
 import { PageHero } from "@/components/page-hero";
-import { buildMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = buildMetadata({
-  title: "Contact Local SEO Wiser | Book a Strategy Call",
-  description:
-    "Contact Local SEO Wiser for local SEO consulting, campaign support, and a strategy call tailored to your market.",
-  path: "/contact-us",
-  keywords: ["contact local seo agency", "local seo strategy call", "local seo consultation"],
-});
-
-export default function ContactUsPage() {
+export function ContactPageContent() {
   return (
     <main>
       <PageHero

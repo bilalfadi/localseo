@@ -247,7 +247,7 @@ function HeroSection() {
               </div>
               <div className="mt-8 flex flex-wrap gap-3">
                 <Link
-                  href="/contact-us"
+                  href="/contact"
                   className="inline-flex items-center gap-2 rounded-xl bg-gradient-to-r from-violet-500 via-blue-500 to-cyan-400 px-6 py-3 text-sm font-semibold text-white shadow-[0_12px_30px_rgba(59,130,246,0.35)] transition-transform hover:-translate-y-0.5"
                 >
                   Book Strategy Call
@@ -656,7 +656,7 @@ function PortfolioSection() {
         {portfolioItems.slice(0, 3).map((item, index) => (
           <Reveal key={item.id} delay={index * 0.09}>
             <Link
-              href={`/portfolio/${item.slug}`}
+              href={`/${item.slug}`}
               className="glass-card group flex h-full min-h-[360px] flex-col rounded-2xl p-5 transition hover:border-cyan-300/40"
             >
               <div className="mb-4 overflow-hidden rounded-2xl border border-slate-700/70">
@@ -761,7 +761,7 @@ function FinalCta() {
             </div>
             <div className="mt-5 flex flex-wrap gap-3">
               <Link
-                href="/contact-us"
+                href="/contact"
                 className="inline-flex items-center rounded-full bg-cyan-300 px-5 py-2.5 text-sm font-semibold text-slate-950 transition hover:bg-cyan-200"
               >
                 Talk to Strategist

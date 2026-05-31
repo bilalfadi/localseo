@@ -1,18 +1,8 @@
-import type { Metadata } from "next";
 import { PageHero } from "@/components/page-hero";
 import { PortfolioFilter } from "@/components/portfolio-filter";
-import { buildMetadata } from "@/lib/seo";
 import { portfolioItems } from "@/lib/site-data";
 
-export const metadata: Metadata = buildMetadata({
-  title: "Portfolio | Local SEO Wiser Campaign Results",
-  description:
-    "Explore Local SEO Wiser portfolio campaigns across Google Business Profile, citation building, review management, and multi-location SEO.",
-  path: "/portfolio",
-  keywords: ["local seo portfolio", "google business profile portfolio", "local campaign results"],
-});
-
-export default function PortfolioPage() {
+export function PortfolioPageContent() {
   return (
     <main>
       <PageHero

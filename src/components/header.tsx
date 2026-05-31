@@ -58,7 +58,7 @@ export function Header() {
         </nav>
         <div className="hidden lg:block">
           <Link
-            href="/contact-us"
+            href="/contact"
             className="rounded-xl bg-gradient-to-r from-violet-500 via-blue-500 to-cyan-400 px-5 py-3 text-sm font-semibold text-white shadow-[0_12px_26px_rgba(37,99,235,0.45)] transition-transform hover:-translate-y-0.5"
           >
             Book Strategy Call
@@ -99,7 +99,7 @@ export function Header() {
                 </Link>
               ))}
               <Link
-                href="/contact-us"
+                href="/contact"
                 onClick={() => setOpen(false)}
                 className="mt-2 rounded-xl bg-gradient-to-r from-violet-500 via-blue-500 to-cyan-400 px-5 py-3 text-center text-sm font-semibold text-white"
               >
