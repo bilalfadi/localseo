@@ -205,7 +205,7 @@ function HeroSection() {
       </div>
 
       <div className="section-shell relative pt-4 pb-16 md:pt-6 md:pb-24">
-        <div className="grid items-center gap-12 lg:grid-cols-[1.1fr_0.9fr]">
+        <div className="grid items-start gap-12 lg:grid-cols-[1.1fr_0.9fr]">
           {/* Left: answer-first copy */}
           <Reveal>
             <div>
@@ -282,7 +282,7 @@ function HeroSection() {
 
           {/* Right: clean supporting visual */}
           <Reveal delay={0.1}>
-            <div className="relative mx-auto w-full max-w-xl lg:max-w-none">
+            <div className="relative mx-auto w-full max-w-xl pt-11 md:pt-12 lg:max-w-none lg:pt-14">
               <div className="absolute -inset-1.5 rounded-[1.9rem] bg-gradient-to-br from-violet-500/50 via-blue-500/35 to-cyan-400/50 opacity-60 blur-xl" />
               <div className="relative overflow-hidden rounded-[1.6rem] border border-white/10 bg-white shadow-[0_35px_90px_rgba(2,6,23,0.55)]">
                 <Image
