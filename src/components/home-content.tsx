@@ -26,6 +26,7 @@ import {
 import {
   businessLocation,
   faqs,
+  homeServiceDescriptions,
   mapCoverageStats,
   portfolioCaseStudy,
   portfolioItems,
@@ -70,7 +71,7 @@ const industryCards = [
     image:
       "https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=900&q=80",
     description:
-      "Drive appointment-ready traffic with treatment intent pages, review trust signals, and stronger map pack visibility.",
+      "Drive appointment-ready traffic with treatment intent pages, review trust signals, and stronger map pack visibility for your Pittsburgh practice.",
     highlights: ["Implants & cosmetic intent", "Emergency local searches"],
   },
   {
@@ -79,7 +80,7 @@ const industryCards = [
     image:
       "https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&w=900&q=80",
     description:
-      "Capture high-value legal leads by improving local authority signals and city-specific service relevance.",
+      "Capture high-value Pittsburgh legal leads by improving local authority signals and city-specific service relevance across neighborhoods you serve.",
     highlights: ["Practice-area localization", "Consultation lead quality"],
   },
   {
@@ -88,7 +89,7 @@ const industryCards = [
     image:
       "https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&w=900&q=80",
     description:
-      "Rank for urgent service queries with tighter geo-targeting and service-area optimization for fast-call intent.",
+      "Rank for urgent Pittsburgh service queries with tighter geo-targeting and service-area optimization built for fast-call intent.",
     highlights: ["Emergency call terms", "Service-area pages"],
   },
   {
@@ -97,7 +98,7 @@ const industryCards = [
     image:
       "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=900&q=80",
     description:
-      "Increase reservations and walk-ins through menu discoverability, local map prominence, and review velocity.",
+      "Increase Pittsburgh reservations and walk-ins through menu discoverability, local map prominence, and review velocity that outpaces competitors.",
     highlights: ["Near me dining intent", "Reservation conversion flow"],
   },
   {
@@ -106,7 +107,7 @@ const industryCards = [
     image:
       "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=900&q=80",
     description:
-      "Improve patient acquisition using trusted profile optimization, service schema, and local reputation management.",
+      "Improve patient acquisition using trusted profile optimization, service schema, and local reputation management for Pittsburgh healthcare practices.",
     highlights: ["Patient trust optimization", "Healthcare local signals"],
   },
   {
@@ -115,7 +116,7 @@ const industryCards = [
     image:
       "https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&w=900&q=80",
     description:
-      "Build neighborhood-level visibility with high-intent location pages and branch-level Google profile strategy.",
+      "Build neighborhood-level visibility across Pittsburgh's distinct areas with high-intent location pages and branch-level Google profile strategy.",
     highlights: ["Neighborhood targeting", "Branch discovery growth"],
   },
   {
@@ -124,7 +125,7 @@ const industryCards = [
     image:
       "https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=900&q=80",
     description:
-      "Generate qualified service requests by aligning local keyword clusters with project-focused landing experiences.",
+      "Generate qualified Pittsburgh service requests by aligning local keyword clusters with project-focused landing experiences.",
     highlights: ["Project-category SEO", "Lead funnel alignment"],
   },
   {
@@ -133,7 +134,7 @@ const industryCards = [
     image:
       "https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&w=900&q=80",
     description:
-      "Boost in-store visits using map visibility optimization, localized offers, and stronger review-led trust.",
+      "Boost Pittsburgh in-store visits using map visibility optimization, localized offers, and stronger review-led trust with nearby shoppers.",
     highlights: ["Storefront discovery", "Footfall-oriented content"],
   },
 ];
@@ -143,7 +144,6 @@ const trustFlags = [
   { code: "gb", name: "United Kingdom" },
   { code: "ca", name: "Canada" },
   { code: "au", name: "Australia" },
-  { code: "nz", name: "New Zealand" },
 ];
 
 const performanceStats = [
@@ -194,8 +194,6 @@ export function HomeContent() {
   );
 }
 
-const heroTrustBrands = ["BrightPath Dental", "Metro Legal", "Oakline Realty", "Nexa Clinics", "Summit HVAC"];
-
 function HeroSection() {
   return (
     <section className="relative overflow-hidden">
@@ -217,13 +215,28 @@ function HeroSection() {
               </div>
 
               <h1 className="mt-6 max-w-3xl text-4xl font-semibold leading-[1.05] tracking-tight text-white md:text-[3.9rem]">
-                We grow local businesses with SEO that{" "}
-                <span className="gradient-text">drives real revenue</span>
+                Pittsburgh Local SEO Agency That Puts Your Business on the Google Map
               </h1>
 
               <p className="mt-6 max-w-xl text-base leading-8 text-slate-300 md:text-lg">
-                Win the map pack, earn more reviews, and turn nearby searches into booked calls, backed by transparent
-                monthly reporting that ties our work to leads, not vanity rankings.
+                Most Pittsburgh businesses are invisible on Google Maps while competitors down the street collect every
+                call. We fix that with proven local SEO that drives real leads, not vanity rankings.
+              </p>
+              <p className="mt-4 max-w-xl text-base leading-8 text-slate-400">
+                If your Pittsburgh business is not showing up in the local 3-pack, you are handing customers to your
+                competitors every single day. Our{" "}
+                <Link href="/pittsburgh-local-seo" className="font-medium text-cyan-200 hover:text-cyan-100">
+                  Pittsburgh local SEO
+                </Link>{" "}
+                and{" "}
+                <Link
+                  href="/pittsburgh-google-maps-optimization"
+                  className="font-medium text-cyan-200 hover:text-cyan-100"
+                >
+                  Google Maps optimization Pittsburgh
+                </Link>{" "}
+                programs help service businesses, contractors, medical practices, and local shops across Pittsburgh, from
+                the North Shore to Squirrel Hill, rank where it counts and turn nearby searches into booked calls.
               </p>
 
               {/* Single primary CTA + ghost secondary */}
@@ -232,7 +245,7 @@ function HeroSection() {
                   href="/contact"
                   className="glow-ring group inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-violet-500 via-blue-500 to-cyan-400 px-8 py-4 text-sm font-semibold text-white transition-transform hover:-translate-y-0.5"
                 >
-                  Get My Free Proposal
+                  Get My Free Pittsburgh SEO Proposal
                   <ArrowRight size={16} className="transition-transform group-hover:translate-x-0.5" />
                 </Link>
                 <Link
@@ -299,16 +312,26 @@ function HeroSection() {
           </Reveal>
         </div>
 
-        {/* Trust / client strip */}
+        {/* Trust strip */}
         <Reveal delay={0.15}>
           <div className="mt-14 border-t border-white/5 pt-8">
             <p className="text-center text-xs font-semibold uppercase tracking-[0.22em] text-slate-500">
-              Trusted by local brands across the US, UK, Canada & Australia
+              Trusted by local brands across Pittsburgh and beyond
             </p>
-            <div className="mt-5 flex flex-wrap items-center justify-center gap-x-10 gap-y-4">
-              {heroTrustBrands.map((brand) => (
-                <span key={brand} className="text-sm font-semibold tracking-wide text-slate-400/90">
-                  {brand}
+            <div className="mt-5 flex flex-wrap items-center justify-center gap-4">
+              {trustFlags.map((flag) => (
+                <span
+                  key={flag.code}
+                  className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-3 py-1.5 text-xs font-medium text-slate-300"
+                >
+                  <Image
+                    src={`https://flagcdn.com/w40/${flag.code}.png`}
+                    alt={flag.name}
+                    width={20}
+                    height={14}
+                    className="h-3.5 w-5 rounded-[2px] object-cover"
+                  />
+                  {flag.name}
                 </span>
               ))}
             </div>
@@ -329,10 +352,15 @@ function TrustSection() {
             <div>
               <p className="text-sm font-semibold uppercase tracking-[0.2em] text-cyan-200">Proven Results</p>
               <h2 className="mt-3 text-3xl font-semibold leading-tight text-white md:text-4xl">
-                Numbers that prove our local SEO works
+                Numbers That Prove Our Pittsburgh Local SEO Works
               </h2>
               <p className="mt-4 text-slate-300">
-                We measure success in leads, calls, and revenue, not vanity rankings.
+                We measure success in calls, leads, and revenue, not rankings that do not convert.
+              </p>
+              <p className="mt-4 text-sm leading-7 text-slate-400">
+                Pittsburgh businesses compete in one of the most concentrated local markets in the northeastern US.
+                Neighborhoods like Shadyside, Mt. Lebanon, and the South Side have dense clusters of businesses fighting
+                for the same three map pack spots. Our campaigns are built around that reality, not generic templates.
               </p>
               <div className="mt-6 flex flex-wrap items-center gap-4">
                 <span className="flex items-center gap-2">
@@ -396,11 +424,21 @@ function ServicesSection() {
           <div className="max-w-2xl">
             <p className="text-sm font-semibold uppercase tracking-[0.2em] text-cyan-200">Services</p>
             <h2 className="mt-3 text-3xl font-semibold text-white md:text-4xl">
-              Local SEO services designed for revenue growth
+              Local SEO Services Built for Pittsburgh Business Growth
             </h2>
             <p className="mt-4 text-slate-300">
-              A complete local growth stack, from Google Business Profile and citations to landing pages and reporting,
-              built to turn nearby searches into qualified leads.
+              From your Google Business Profile to technical site health, we handle every layer of{" "}
+              <Link href="/pittsburgh-local-seo" className="font-medium text-cyan-200 hover:text-cyan-100">
+                Pittsburgh local SEO
+              </Link>{" "}
+              and{" "}
+              <Link
+                href="/pittsburgh-google-maps-optimization"
+                className="font-medium text-cyan-200 hover:text-cyan-100"
+              >
+                Google Maps optimization Pittsburgh
+              </Link>{" "}
+              that gets Pittsburgh businesses found and chosen by nearby customers.
             </p>
           </div>
           <Link
@@ -428,7 +466,8 @@ function ServicesSection() {
                     <Icon size={22} />
                   </div>
                   <h3 className="mt-5 text-xl font-semibold text-white">{item.title}</h3>
-                  <p className="mt-3 text-sm leading-6 text-slate-400">{item.description}</p>
+                  <p className="mt-1 text-sm font-medium text-cyan-200/90">{item.subtitle}</p>
+                  <p className="mt-3 text-sm leading-6 text-slate-400">{homeServiceDescriptions[index]}</p>
                   <div className="mt-4 flex flex-wrap gap-2">
                     {serviceHighlights[index].map((chip) => (
                       <span
@@ -457,35 +496,35 @@ const localSeoStats = [
   {
     value: "46%",
     title: "Local intent searches",
-    detail: "Nearly half of all Google searches are looking for something nearby.",
+    detail: "Of all Google searches have local intent.",
     source: "Google",
   },
   {
     value: "76%",
     title: "Store visits in 24 hours",
-    detail: "Most nearby mobile searches turn into a physical visit within one day.",
+    detail: "Of nearby mobile searches result in a store visit within 24 hours.",
     source: "Backlinko",
   },
   {
     value: "88%",
     title: "Calls or visits in a week",
-    detail: "Local mobile searchers call or visit a business within seven days.",
+    detail: "Of local mobile searchers call or visit a business within one week.",
     source: "Google",
   },
 ];
 
 const withoutLocalSeo = [
-  "Inconsistent listings across Google, maps & directories",
-  "Few reviews and slow responses to customer feedback",
-  "Invisible in the map pack for high-intent “near me” searches",
-  "No clear view of calls, clicks, or direction requests",
+  "Your listing appears differently across Google, Maps, and directories, confusing both customers and Google's algorithm",
+  "Few reviews and slow responses signal low trustworthiness to potential Pittsburgh customers",
+  "You are invisible in the map pack while nearby competitors collect every high-intent near me search",
+  "No clear view of how many calls, clicks, or direction requests your profile is actually generating",
 ];
 
 const withLocalSeo = [
-  "Optimized profile with strong local relevance signals",
-  "Steady review flow with managed sentiment & responses",
-  "Top visibility for near-me and service-area keywords",
-  "Transparent reporting tied to leads, calls & revenue",
+  "Fully optimized Pittsburgh profile with strong local relevance signals and category alignment",
+  "Steady, managed review flow that builds trust and improves your star rating over time",
+  "Top map pack visibility for the near-me and service-area keywords that drive real calls in Pittsburgh",
+  "Transparent monthly reporting that connects our work directly to leads, calls, and revenue",
 ];
 
 function LocalSeoMattersSection() {
@@ -495,11 +534,11 @@ function LocalSeoMattersSection() {
         <div className="mx-auto max-w-2xl text-center">
           <p className="text-sm font-semibold uppercase tracking-[0.2em] text-cyan-200">Why Local SEO Matters</p>
           <h2 className="mt-3 text-3xl font-semibold text-white md:text-4xl">
-            Local search is where buying decisions happen
+            Local Search Is Where Pittsburgh Buying Decisions Happen
           </h2>
           <p className="mt-4 text-slate-300">
-            Nearby searches carry the highest purchase intent of any channel. If you are not visible at that moment, a
-            competitor is, and they get the call.
+            When someone in Pittsburgh searches for a plumber, a dentist, or an HVAC company, they are not browsing.
+            They are ready to call. If your business is not visible at that moment, a competitor gets the lead.
           </p>
         </div>
       </Reveal>
@@ -558,7 +597,7 @@ function LocalSeoMattersSection() {
               href="/contact"
               className="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-cyan-300 transition hover:gap-3 hover:text-cyan-200"
             >
-              Start your local growth
+              Start Your Pittsburgh Local Growth
               <ArrowRight size={15} />
             </Link>
           </article>
@@ -576,11 +615,11 @@ function ProcessSection() {
         <div className="mx-auto max-w-2xl text-center">
           <p className="text-sm font-semibold uppercase tracking-[0.2em] text-cyan-200">Local SEO Process</p>
           <h2 className="mt-3 text-3xl font-semibold text-white md:text-4xl">
-            A transparent system from audit to reporting
+            A Transparent System from Pittsburgh Audit to Monthly Reporting
           </h2>
           <p className="mt-4 text-slate-300">
-            Five clear stages, full visibility at every step, so you always know what we are doing, why, and how it
-            moves your local results.
+            Five clear stages, full visibility at every step. You will always know what we are doing, why it matters, and
+            how it is moving your Pittsburgh rankings forward.
           </p>
         </div>
       </Reveal>
@@ -619,7 +658,13 @@ function IndustriesSection() {
     <section className="section-shell py-14">
       <Reveal>
         <p className="text-sm font-semibold uppercase tracking-[0.2em] text-cyan-200">Industries We Serve</p>
-        <h2 className="mt-3 text-3xl font-semibold text-white md:text-4xl">Built for local industries where trust and proximity drive conversions</h2>
+        <h2 className="mt-3 text-3xl font-semibold text-white md:text-4xl">
+          Built for Pittsburgh Industries Where Trust and Proximity Drive Conversions
+        </h2>
+        <p className="mt-4 max-w-3xl text-slate-300">
+          Pittsburgh&apos;s local market is competitive across every sector. Whether you are a dentist in Shadyside, a
+          contractor in the South Hills, or a law firm in Downtown Pittsburgh, we know your market and how to win it.
+        </p>
       </Reveal>
       <div className="mt-7 grid gap-4 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4">
         {industryCards.map((industry, index) => {
@@ -667,7 +712,9 @@ function PortfolioSection() {
       <div className="flex flex-wrap items-end justify-between gap-4">
         <Reveal>
           <p className="text-sm font-semibold uppercase tracking-[0.2em] text-cyan-200">Portfolio</p>
-          <h2 className="mt-3 text-3xl font-semibold text-white md:text-4xl">Selected local growth campaigns</h2>
+          <h2 className="mt-3 text-3xl font-semibold text-white md:text-4xl">
+            Selected Pittsburgh and Regional Local Growth Campaigns
+          </h2>
         </Reveal>
         <Link
           href="/portfolio"
@@ -765,7 +812,9 @@ function TestimonialsSection() {
     <section className="section-shell py-14">
       <Reveal>
         <p className="text-sm font-semibold uppercase tracking-[0.2em] text-cyan-200">Testimonials</p>
-        <h2 className="mt-3 text-3xl font-semibold text-white md:text-4xl">What clients say about working with us</h2>
+        <h2 className="mt-3 text-3xl font-semibold text-white md:text-4xl">
+          What Pittsburgh and Regional Clients Say About Working With Us
+        </h2>
       </Reveal>
       <div className="mt-7">
         <TestimonialSlider items={testimonials} />
@@ -779,7 +828,9 @@ function FaqSection() {
     <section className="section-shell py-14">
       <Reveal>
         <p className="text-sm font-semibold uppercase tracking-[0.2em] text-cyan-200">FAQ</p>
-        <h2 className="mt-3 text-3xl font-semibold text-white md:text-4xl">Answers to common local SEO questions</h2>
+        <h2 className="mt-3 text-3xl font-semibold text-white md:text-4xl">
+          Common Questions from Pittsburgh Business Owners
+        </h2>
       </Reveal>
       <div className="mt-7">
         <FaqAccordion items={faqs} />
@@ -801,20 +852,23 @@ function FinalCta() {
         <div className="relative z-10 grid gap-7 lg:grid-cols-[1.25fr_0.75fr] lg:items-end">
           <div>
             <p className="text-sm font-semibold uppercase tracking-[0.2em] text-cyan-100">Next Step</p>
-            <h2 className="mt-3 text-3xl font-semibold text-white md:text-4xl">Plan your next 90 days of local growth</h2>
+            <h2 className="mt-3 text-3xl font-semibold text-white md:text-4xl">
+              Plan Your Next 90 Days of Pittsburgh Local Growth
+            </h2>
             <p className="mt-4 max-w-3xl text-slate-200">
-              Get a focused roadmap for maps visibility, review velocity, and conversion-ready local pages so your
+              Pittsburgh&apos;s map pack has three spots. Your competitors are actively working to hold them. Get a
+              focused roadmap for Pittsburgh map visibility, review velocity, and conversion-ready local pages, so your
               team knows exactly what to prioritize first.
             </p>
             <div className="mt-5 flex flex-wrap gap-3">
               <span className="rounded-full border border-cyan-200/35 bg-slate-950/40 px-4 py-2 text-xs font-semibold uppercase tracking-[0.18em] text-cyan-100">
-                Priority actions
+                Priority actions for your Pittsburgh market
               </span>
               <span className="rounded-full border border-cyan-200/35 bg-slate-950/40 px-4 py-2 text-xs font-semibold uppercase tracking-[0.18em] text-cyan-100">
-                Geo-grid insights
+                Geo-grid insights across Pittsburgh neighborhoods
               </span>
               <span className="rounded-full border border-cyan-200/35 bg-slate-950/40 px-4 py-2 text-xs font-semibold uppercase tracking-[0.18em] text-cyan-100">
-                Monthly direction
+                Monthly direction so you are never guessing what comes next
               </span>
             </div>
           </div>
@@ -823,7 +877,7 @@ function FinalCta() {
             <div className="mt-4 space-y-3 text-sm text-slate-200">
               <p className="flex items-center gap-2">
                 <CheckCircle2 size={16} className="text-cyan-200" />
-                Strategy call with local SEO specialist
+                Strategy call with a Pittsburgh local SEO specialist
               </p>
               <p className="flex items-center gap-2">
                 <CheckCircle2 size={16} className="text-cyan-200" />
@@ -835,7 +889,7 @@ function FinalCta() {
                 href="/contact"
                 className="inline-flex items-center rounded-full bg-cyan-300 px-5 py-2.5 text-sm font-semibold text-slate-950 transition hover:bg-cyan-200"
               >
-                Talk to Strategist
+                Get My Free Pittsburgh SEO Proposal
               </Link>
               <Link
                 href="/services"

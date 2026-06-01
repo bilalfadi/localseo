@@ -143,7 +143,7 @@ export const trustStats = [
 
 export const serviceCards = allServiceItems.slice(0, 6).map((item) => ({
   title: item.title,
-  description: item.subtitle,
+  subtitle: item.subtitle,
   href: `/${item.slug}`,
 }));
 
@@ -158,31 +158,40 @@ export const industries = [
   "Local Shops",
 ];
 
+export const homeServiceDescriptions = [
+  "Win the Pittsburgh map pack with a full local SEO strategy covering profile health, citation consistency, keyword alignment, and locally targeted content that signals relevance to Google.",
+  "Your Google Business Profile is your most powerful Pittsburgh asset. We optimize every field, category, photo, and signal so Google has every reason to rank you in the top 3.",
+  "Pittsburgh small businesses do not need enterprise software. They need a focused strategy. We prioritize the high-impact fixes that move the needle fastest for local independents.",
+  "Inconsistent business information across directories quietly kills your Pittsburgh rankings. We audit, clean, and build citations across the directories that Google actually trusts.",
+  "Getting found is only half the battle. We build and optimize Pittsburgh location pages that turn visitors into calls, with clear intent matching, local signals, and strong CTAs.",
+  "A slow or broken website undermines every other local SEO effort. We handle the technical foundation so your Pittsburgh site loads fast, crawls clean, and ranks with confidence.",
+];
+
 export const processSteps = [
   {
     title: "Audit",
     description:
-      "We review your listings, website, citations, reviews, and competition to uncover missed local opportunities.",
+      "We review your Pittsburgh Google Business Profile, website, citations, reviews, and competitors to uncover the exact gaps preventing you from ranking. No guesswork. Every recommendation is backed by data.",
   },
   {
     title: "Strategy",
     description:
-      "You get a focused roadmap with priorities by effort, impact, and how quickly they can influence local visibility.",
+      "You get a focused Pittsburgh SEO roadmap prioritized by impact and speed to result. We sequence fixes based on your market, industry, and competitive position in Pittsburgh.",
   },
   {
     title: "Optimization",
     description:
-      "Our team implements profile, content, citation, and reputation updates while preserving your brand voice.",
+      "Our team implements profile updates, content improvements, citation cleanups, and reputation workflows, all tailored to your Pittsburgh service area and brand voice. We execute, you stay informed.",
   },
   {
     title: "Tracking",
     description:
-      "We monitor rankings by geo-grid, calls, bookings, and clicks to measure how local intent converts.",
+      "We monitor your Pittsburgh map pack rankings by geo-grid, track phone calls and clicks, and measure how local search intent converts into actual leads. Position alone does not tell the full story.",
   },
   {
     title: "Reporting",
     description:
-      "Each month includes clear performance reporting, insights, and next-step recommendations.",
+      "Every month you receive a plain-English report showing what moved, what drove calls, and what is next. No jargon, no hiding behind metrics. Just a clear picture of your Pittsburgh SEO performance.",
   },
 ];
 
@@ -345,7 +354,7 @@ export const portfolioCaseStudy: PortfolioCaseStudy = {
   completed:
     "Technical SEO fixes, local keyword mapping, on-page optimization, monthly GSC reporting, and call performance tracking.",
   result:
-    "Organic clicks reached 1.66K in six months (up from 902), impressions grew to 858K, and local search visibility consistently converted into phone leads.",
+    "Organic clicks reached 1.66K over six months, up from 902 in the previous period. Search impressions grew to 858K, average ranking position improved from 52.2 to 37.5, and the campaign drove 50 peak phone calls in a single month.",
   summary:
     "4s Chemicals needed stronger local search visibility in a competitive industrial category. We built a reporting-led local SEO program that improved Google Search Console performance, expanded impression volume, and turned search visibility into measurable phone call activity.",
   image: fourSChemicalsGallery[0].image,
@@ -485,66 +494,71 @@ export const testimonials = [
     name: "Angela Park",
     role: "Owner, Midtown Smiles",
     quote:
-      "Local SEO Wiser gave us a clear roadmap and handled the execution. We now see consistent calls from map results.",
+      "Local SEO Wiser gave us a clear roadmap and handled the execution. We now see consistent calls coming directly from Google Maps results.",
     flag: "🇺🇸",
   },
   {
     name: "Joseph Reed",
     role: "Managing Partner, Reed Family Law",
     quote:
-      "The team improved our local visibility without overpromising. The reporting is transparent and strategic.",
+      "The team improved our local visibility without overpromising. The reporting is transparent, strategic, and actually tied to leads, not rankings.",
     flag: "🇬🇧",
   },
   {
     name: "Olivia Chen",
     role: "Director, Harbour Clinic",
     quote:
-      "Their review and profile strategy helped us stand out in a competitive area. Lead quality has noticeably improved.",
+      "Their review and profile strategy helped us stand out in a competitive area. The quality of leads we are getting from Google Maps has noticeably improved.",
     flag: "🇦🇺",
   },
   {
     name: "Maria Santos",
     role: "Marketing Lead, Riverstone Realty",
     quote:
-      "Their local content and map strategy helped us attract higher-intent buyers from nearby neighborhoods.",
+      "Their local content and Pittsburgh neighborhood strategy helped us attract higher-intent buyers from the areas we actually serve.",
     flag: "🇨🇦",
   },
   {
     name: "David Carter",
     role: "Owner, Carter HVAC Services",
     quote:
-      "We finally have consistent calls from discovery searches. The monthly insights are clear and actionable.",
+      "We finally have consistent calls from discovery searches. People finding us on Maps who had no idea we existed before. The monthly insights are clear and actionable.",
     flag: "🇳🇿",
   },
   {
     name: "Lisa Williams",
     role: "Practice Manager, Northside Wellness",
     quote:
-      "The review workflow and profile updates made a measurable difference in booked appointments within weeks.",
+      "The review workflow and profile updates made a measurable difference in booked appointments within just a few weeks.",
     flag: "🇺🇸",
   },
 ];
 
 export const faqs = [
   {
-    question: "How long does local SEO usually take to show progress?",
+    question: "How long does local SEO take to show results for a Pittsburgh business?",
     answer:
-      "Most campaigns begin showing directional improvements within 8 to 12 weeks, while stronger competitive gains can take 4 to 6 months depending on your market and baseline.",
+      "Most Pittsburgh campaigns begin showing directional improvements within 8 to 12 weeks, including improved profile engagement, more direction requests, and better keyword positions. Meaningful map pack movement in competitive Pittsburgh industries like dental, legal, or HVAC typically takes 4 to 6 months, depending on how established your competitors are and your starting baseline.",
   },
   {
-    question: "Do you guarantee #1 rankings on Google Maps?",
+    question: "How do I get my Pittsburgh business into the Google Map Pack?",
     answer:
-      "No. Ethical local SEO agencies should not promise guaranteed #1 rankings. We focus on proven optimization, measurable growth, and sustainable performance.",
+      "The Google Map Pack is earned through a combination of profile completeness, review authority, citation consistency, and website relevance signals. For Pittsburgh businesses, that also means optimizing for neighborhood-level proximity and making sure your service area, categories, and business description reflect exactly what Pittsburgh customers are searching for.",
   },
   {
-    question: "Can you support multi-location businesses?",
+    question: "What makes Local SEO Wiser different from other Pittsburgh SEO companies?",
     answer:
-      "Yes. We build scalable frameworks for profile optimization, citation management, localized pages, and reporting across all locations.",
+      "We do not hide behind vanity metrics. Every report we send connects our work to actual calls, clicks, and direction requests, not just ranking movement. We also bring experience across competitive Pittsburgh markets including healthcare, legal, and home services, and we build your strategy around the specific Pittsburgh neighborhoods and ZIP codes that matter most to your business.",
   },
   {
-    question: "Will I get transparent reporting each month?",
+    question: "Do you work with single-location Pittsburgh businesses or multi-location?",
     answer:
-      "Absolutely. You receive clear performance dashboards, actionable insights, and recommendations tied to business outcomes such as calls and bookings.",
+      "Both. Most of our Pittsburgh clients are single-location service businesses, such as a dental practice in Squirrel Hill, a law firm Downtown, or an HVAC company serving the South Hills. We also work with multi-location businesses across Pittsburgh and surrounding areas like Cranberry Township, Mt. Lebanon, and Bethel Park who need consistent local visibility across every location.",
+  },
+  {
+    question: "How much does local SEO cost for a Pittsburgh business?",
+    answer:
+      "Pittsburgh local SEO typically runs between $400 and $1,500 per month depending on your industry, how competitive your target neighborhoods are, and the scope of work involved. A plumber targeting the entire Pittsburgh metro needs a different investment than a single-location restaurant optimizing for one neighborhood. We offer a free audit and proposal so you know exactly what you are getting and why before committing to anything.",
   },
 ];
 

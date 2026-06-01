@@ -1,40 +1,26 @@
 import type { Metadata } from "next";
 import { buildMetadata } from "@/lib/seo";
 import { HomeContent } from "@/components/home-content";
+import { faqs } from "@/lib/site-data";
+import { buildFaqSchema } from "@/lib/structured-data";
 
 export async function generateMetadata(): Promise<Metadata> {
   return buildMetadata({
-    title: "Local SEO Wiser | Rank Higher on Google Maps",
+    title: "Local SEO Agency Pittsburgh | Local SEO Wiser",
     description:
-      "Turn local searches into customers with Local SEO Wiser. Discover premium local SEO services, reporting, and growth strategies for ambitious local brands.",
+      "Pittsburgh's local SEO agency that wins the map pack. Real results: 1.66K clicks, 858K impressions. Get your free Pittsburgh SEO proposal today.",
     path: "/",
-    keywords: ["local seo", "google maps ranking", "local business marketing"],
+    keywords: [
+      "local SEO agency Pittsburgh",
+      "Pittsburgh local SEO",
+      "google maps SEO Pittsburgh",
+      "google business profile optimization",
+    ],
   });
 }
 
 export default function Home() {
-  const faqSchema = {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    mainEntity: [
-      {
-        "@type": "Question",
-        name: "How long does local SEO usually take to show progress?",
-        acceptedAnswer: {
-          "@type": "Answer",
-          text: "Most campaigns begin showing directional improvements within 8 to 12 weeks, while stronger competitive gains can take 4 to 6 months depending on your market and baseline.",
-        },
-      },
-      {
-        "@type": "Question",
-        name: "Do you guarantee #1 rankings on Google Maps?",
-        acceptedAnswer: {
-          "@type": "Answer",
-          text: "No. Ethical local SEO agencies should not promise guaranteed #1 rankings. We focus on proven optimization, measurable growth, and sustainable performance.",
-        },
-      },
-    ],
-  };
+  const faqSchema = buildFaqSchema(faqs);
 
   return (
     <>

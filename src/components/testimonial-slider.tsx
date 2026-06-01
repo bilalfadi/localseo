@@ -55,12 +55,14 @@ export function TestimonialSlider({ items }: { items: Testimonial[] }) {
           <p className="text-5xl font-bold leading-none">4.9</p>
           <p className="mt-2 text-2xl font-semibold">Industry-leading</p>
           <p className="text-2xl font-semibold">rating</p>
-          <p className="mt-2 text-sm font-medium text-slate-600">Based on verified local campaigns</p>
+          <p className="mt-2 text-sm font-medium text-slate-600">
+            Industry-leading rating based on verified local campaigns
+          </p>
         </div>
       </div>
       <div className="mt-8 flex items-center gap-4 text-sm text-slate-300">
         <span className="h-px flex-1 bg-slate-700/80" />
-        <p>All 5-star reviews on Google</p>
+        <p>4.9 average client satisfaction</p>
         <span className="h-px flex-1 bg-slate-700/80" />
       </div>
       <div className="mt-6 grid gap-5 md:grid-cols-2 xl:grid-cols-3">
@@ -84,7 +86,7 @@ export function TestimonialSlider({ items }: { items: Testimonial[] }) {
           href="/contact"
           className="inline-flex text-base font-semibold text-cyan-200 underline decoration-cyan-300/60 underline-offset-4 hover:text-cyan-100"
         >
-          See more reviews
+          See More Reviews
         </a>
       </div>
     </div>

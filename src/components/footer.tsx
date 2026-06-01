@@ -11,8 +11,9 @@ export function Footer() {
           <div className="space-y-4">
             <Logo compact imgClassName="h-7 sm:h-8" />
             <p className="max-w-sm text-sm text-slate-300">
-              Based in {businessLocation.label}, Local SEO Wiser helps service-area and storefront brands turn nearby
-              intent into measurable pipeline through practical local SEO execution.
+              Based in Pittsburgh, Pennsylvania, Local SEO Wiser helps service-area and storefront businesses across
+              Pittsburgh turn nearby search intent into measurable pipeline through practical, transparent local SEO
+              execution.
             </p>
           </div>
           <div className="glass-card rounded-2xl p-4">

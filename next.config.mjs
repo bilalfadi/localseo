@@ -48,6 +48,12 @@ const nextConfig = {
     return [
       { source: "/about-us", destination: "/about", permanent: true },
       { source: "/contact-us", destination: "/contact", permanent: true },
+      { source: "/pittsburgh-local-seo", destination: "/local-seo", permanent: true },
+      {
+        source: "/pittsburgh-google-maps-optimization",
+        destination: "/google-map-optimization",
+        permanent: true,
+      },
       { source: "/4s-chemicals-local-seo", destination: "/portfolio", permanent: true },
       {
         source: "/google-business-profile-optimization",

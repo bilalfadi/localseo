@@ -97,24 +97,42 @@ export async function buildOrganizationSchema() {
 
   return {
     "@context": "https://schema.org",
-    "@type": "LocalBusiness",
+    "@type": "MarketingAgency",
     name: "Local SEO Wiser",
     url: siteUrl,
     logo: `${siteUrl}/seo-wiser-logo.png`,
     image: `${siteUrl}/og-local-seo-wiser.svg`,
     description:
-      "Pittsburgh-based local SEO agency helping businesses improve Google Maps visibility, reputation, and qualified customer growth.",
+      "Pittsburgh local SEO agency specializing in Google Maps optimization, Google Business Profile management, citation building, and local search strategy for Pittsburgh small businesses.",
     address: {
       "@type": "PostalAddress",
       addressLocality: "Pittsburgh",
       addressRegion: "PA",
       addressCountry: "US",
     },
-    areaServed: [
-      { "@type": "City", name: "Pittsburgh" },
-      { "@type": "State", name: "Pennsylvania" },
-      { "@type": "Country", name: "United States" },
-    ],
+    telephone: "+13475550199",
+    email: "hello@localseowiser.com",
+    areaServed: {
+      "@type": "City",
+      name: "Pittsburgh",
+      containedInPlace: {
+        "@type": "State",
+        name: "Pennsylvania",
+      },
+    },
+    priceRange: "$$",
+    openingHoursSpecification: {
+      "@type": "OpeningHoursSpecification",
+      dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+      opens: "09:00",
+      closes: "18:00",
+    },
+    aggregateRating: {
+      "@type": "AggregateRating",
+      ratingValue: "4.9",
+      bestRating: "5",
+      reviewCount: "48",
+    },
     sameAs: [
       "https://www.linkedin.com",
       "https://www.instagram.com",
