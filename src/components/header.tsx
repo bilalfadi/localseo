@@ -71,7 +71,7 @@ export function Header() {
           : "border-b border-transparent bg-slate-950/80",
       )}
     >
-      <div className="section-shell flex h-[76px] items-center justify-between gap-6">
+      <div className="section-shell flex h-[76px] items-center justify-between gap-6 overflow-visible">
         <Logo />
 
         <nav className="hidden flex-1 items-center justify-center gap-6 overflow-visible lg:flex xl:gap-8">

@@ -2,7 +2,6 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import { motion } from "framer-motion";
 import {
   ArrowRight,
   BarChart3,
@@ -34,6 +33,15 @@ import {
   serviceCards,
   testimonials,
 } from "@/lib/site-data";
+import {
+  AnimatedStat,
+  BrandReveal,
+  CardReveal,
+  FloatingOrb,
+  HeroItem,
+  HeroStagger,
+  ParallaxLayer,
+} from "@/components/brand-motion";
 import { Reveal } from "@/components/reveal";
 import { TestimonialSlider } from "@/components/testimonial-slider";
 import { FaqAccordion } from "@/components/faq-accordion";
@@ -197,32 +205,75 @@ export function HomeContent() {
 function HeroSection() {
   return (
     <section className="relative overflow-hidden">
-      {/* Subtle, fast background */}
       <div className="pointer-events-none absolute inset-0">
         <div className="grid-overlay absolute inset-0 opacity-[0.10]" />
-        <div className="absolute -left-32 top-0 h-[26rem] w-[26rem] rounded-full bg-violet-600/15 blur-[130px]" />
-        <div className="absolute -right-32 top-20 h-[28rem] w-[28rem] rounded-full bg-cyan-500/15 blur-[130px]" />
+        <FloatingOrb className="absolute -left-32 top-0 h-[26rem] w-[26rem] rounded-full bg-violet-600/15 blur-[130px]" />
+        <FloatingOrb
+          className="absolute -right-32 top-20 h-[28rem] w-[28rem] rounded-full bg-cyan-500/15 blur-[130px]"
+          delay={1.5}
+        />
       </div>
 
       <div className="section-shell relative pt-4 pb-16 md:pt-6 md:pb-24">
-        <div className="grid items-start gap-12 lg:grid-cols-[1.1fr_0.9fr]">
-          {/* Left: answer-first copy */}
-          <Reveal>
-            <div>
+        <div className="grid items-start gap-12 lg:grid-cols-[1.1fr_0.9fr] lg:items-stretch lg:gap-y-8">
+          <HeroStagger className="order-1 lg:col-start-1 lg:row-start-1">
+            <HeroItem>
               <div className="inline-flex items-center gap-2 rounded-full border border-cyan-300/30 bg-cyan-400/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.18em] text-cyan-100">
                 <Sparkles size={13} />
                 Local SEO Agency · {businessLocation.city}, {businessLocation.region}
               </div>
+            </HeroItem>
 
+            <HeroItem>
               <h1 className="mt-6 max-w-3xl text-4xl font-semibold leading-[1.05] tracking-tight text-white md:text-[3.9rem]">
                 Pittsburgh Local SEO Agency That Puts Your Business on the Google Map
               </h1>
+            </HeroItem>
 
+            <HeroItem>
               <p className="mt-6 max-w-xl text-base leading-8 text-slate-300 md:text-lg">
                 Most Pittsburgh businesses are invisible on Google Maps while competitors down the street collect every
                 call. We fix that with proven local SEO that drives real leads, not vanity rankings.
               </p>
-              <p className="mt-4 max-w-xl text-base leading-8 text-slate-400">
+            </HeroItem>
+          </HeroStagger>
+
+          <Reveal delay={0.15} direction="scale" className="order-3 lg:col-start-2 lg:row-start-1">
+            <ParallaxLayer speed={0.1} className="relative mx-auto w-full max-w-xl pt-11 md:pt-12 lg:mx-0 lg:max-w-none lg:pt-14">
+              <div className="group relative">
+                <div className="absolute -inset-1.5 rounded-[1.9rem] bg-gradient-to-br from-violet-500/50 via-blue-500/35 to-cyan-400/50 opacity-60 blur-xl transition-opacity duration-700 group-hover:opacity-80" />
+                <div className="relative overflow-hidden rounded-[1.6rem] border border-white/10 bg-white shadow-[0_35px_90px_rgba(2,6,23,0.55)]">
+                  <Image
+                    src="/hero-local-seo.png"
+                    alt="Local SEO that enhances your local visibility and business listings"
+                    width={1200}
+                    height={800}
+                    priority
+                    className="brand-image-frame aspect-[3/2] w-full object-cover"
+                  />
+                  <div className="absolute inset-x-0 bottom-0 h-28 bg-gradient-to-t from-slate-950/55 to-transparent" />
+                  <BrandReveal className="glass-card glow-ring absolute bottom-4 left-4 right-4 flex items-center justify-between gap-3 rounded-2xl px-4 py-3">
+                    <div className="flex items-center gap-3">
+                      <span className="flex h-9 w-9 items-center justify-center rounded-xl bg-emerald-400/15 text-emerald-300">
+                        <ShieldCheck size={16} />
+                      </span>
+                      <div>
+                        <p className="text-sm font-semibold text-white">Reporting you can verify</p>
+                        <p className="text-[11px] text-slate-400">Real GSC clicks, impressions & calls</p>
+                      </div>
+                    </div>
+                    <p className="text-2xl font-semibold text-cyan-200">
+                      <AnimatedStat value={portfolioCaseStudy.stats[0]?.value ?? ""} />
+                    </p>
+                  </BrandReveal>
+                </div>
+              </div>
+            </ParallaxLayer>
+          </Reveal>
+
+          <HeroStagger className="order-2 lg:col-start-1 lg:row-start-2">
+            <HeroItem>
+              <p className="max-w-xl text-base leading-8 text-slate-400">
                 If your Pittsburgh business is not showing up in the local 3-pack, you are handing customers to your
                 competitors every single day. Our{" "}
                 <Link href="/pittsburgh-local-seo" className="font-medium text-cyan-200 hover:text-cyan-100">
@@ -239,24 +290,24 @@ function HeroSection() {
                 the North Shore to Squirrel Hill, rank where it counts and turn nearby searches into booked calls.
               </p>
 
-              {/* Single primary CTA + ghost secondary */}
               <div className="mt-8 flex flex-wrap items-center gap-4">
                 <Link
                   href="/contact"
-                  className="glow-ring group inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-violet-500 via-blue-500 to-cyan-400 px-8 py-4 text-sm font-semibold text-white transition-transform hover:-translate-y-0.5"
+                  className="brand-btn-primary glow-ring group inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-violet-500 via-blue-500 to-cyan-400 px-8 py-4 text-sm font-semibold text-white transition-transform hover:-translate-y-0.5"
                 >
                   Get My Free Pittsburgh SEO Proposal
                   <ArrowRight size={16} className="transition-transform group-hover:translate-x-0.5" />
                 </Link>
                 <Link
                   href="/portfolio"
-                  className="inline-flex items-center gap-2 rounded-full border border-slate-600/70 bg-slate-900/40 px-7 py-4 text-sm font-semibold text-slate-100 transition hover:border-cyan-300/60 hover:text-cyan-200"
+                  className="inline-flex items-center gap-2 rounded-full border border-slate-600/70 bg-slate-900/40 px-7 py-4 text-sm font-semibold text-slate-100 transition hover:-translate-y-0.5 hover:border-cyan-300/60 hover:text-cyan-200"
                 >
                   See Client Results
                 </Link>
               </div>
+            </HeroItem>
 
-              {/* Social proof directly below CTA */}
+            <HeroItem>
               <div className="mt-6 flex items-center gap-3">
                 <span className="flex items-center gap-0.5 text-amber-300">
                   {"★★★★★".split("").map((s, i) => (
@@ -267,48 +318,38 @@ function HeroSection() {
                   <span className="font-semibold text-white">4.9/5</span> average client satisfaction
                 </span>
               </div>
+            </HeroItem>
 
-              {/* Stat row */}
+            <HeroItem>
               <div className="mt-10 grid grid-cols-3 gap-6 border-t border-white/5 pt-7">
                 {mapCoverageStats.slice(0, 3).map((stat) => (
                   <div key={stat.label}>
-                    <p className="text-2xl font-semibold text-white md:text-3xl">{stat.value}</p>
+                    <p className="text-2xl font-semibold text-white md:text-3xl">
+                      <AnimatedStat value={stat.value} />
+                    </p>
                     <p className="mt-1 text-xs leading-4 text-slate-400">{stat.label}</p>
                   </div>
                 ))}
               </div>
-            </div>
-          </Reveal>
+            </HeroItem>
+          </HeroStagger>
 
-          {/* Right: clean supporting visual */}
-          <Reveal delay={0.1}>
-            <div className="relative mx-auto w-full max-w-xl pt-11 md:pt-12 lg:max-w-none lg:pt-14">
-              <div className="absolute -inset-1.5 rounded-[1.9rem] bg-gradient-to-br from-violet-500/50 via-blue-500/35 to-cyan-400/50 opacity-60 blur-xl" />
-              <div className="relative overflow-hidden rounded-[1.6rem] border border-white/10 bg-white shadow-[0_35px_90px_rgba(2,6,23,0.55)]">
+          <Reveal delay={0.2} direction="right" className="order-4 h-full lg:col-start-2 lg:row-start-2 lg:self-stretch">
+            <ParallaxLayer
+              speed={0.08}
+              className="relative mx-auto h-full min-h-[16rem] w-full max-w-xl sm:min-h-[18rem] lg:mx-0 lg:max-w-none lg:min-h-0"
+            >
+              <div className="group relative h-full min-h-[16rem] overflow-hidden rounded-2xl border border-white/10 shadow-[0_20px_50px_rgba(2,6,23,0.45)] sm:min-h-[18rem] lg:min-h-full">
                 <Image
-                  src="/hero-local-seo.png"
-                  alt="Local SEO that enhances your local visibility and business listings"
-                  width={1200}
-                  height={800}
-                  priority
-                  className="aspect-[3/2] w-full object-cover"
+                  src="/hero-cityscape.png"
+                  alt="City skyline at night representing local search visibility and growth"
+                  fill
+                  sizes="(max-width: 1024px) 100vw, 42vw"
+                  className="brand-image-frame object-cover object-center"
                 />
-                <div className="absolute inset-x-0 bottom-0 h-28 bg-gradient-to-t from-slate-950/55 to-transparent" />
-                {/* One subtle proof badge */}
-                <div className="glass-card glow-ring absolute bottom-4 left-4 right-4 flex items-center justify-between gap-3 rounded-2xl px-4 py-3">
-                  <div className="flex items-center gap-3">
-                    <span className="flex h-9 w-9 items-center justify-center rounded-xl bg-emerald-400/15 text-emerald-300">
-                      <ShieldCheck size={16} />
-                    </span>
-                    <div>
-                      <p className="text-sm font-semibold text-white">Reporting you can verify</p>
-                      <p className="text-[11px] text-slate-400">Real GSC clicks, impressions & calls</p>
-                    </div>
-                  </div>
-                  <p className="text-2xl font-semibold text-cyan-200">{portfolioCaseStudy.stats[0]?.value}</p>
-                </div>
+                <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-slate-950/50 via-transparent to-violet-900/10" />
               </div>
-            </div>
+            </ParallaxLayer>
           </Reveal>
         </div>
 
@@ -394,7 +435,7 @@ function TrustSection() {
               {performanceStats.map((stat, index) => {
                 const Icon = stat.icon;
                 return (
-                  <Reveal key={stat.label} delay={index * 0.08}>
+                  <CardReveal key={stat.label} delay={index * 0.08}>
                     <div className="h-full bg-slate-950/50 p-6">
                       <div className="flex items-center justify-between">
                         <span className="inline-flex h-9 w-9 items-center justify-center rounded-lg bg-cyan-400/10 text-cyan-200">
@@ -402,10 +443,12 @@ function TrustSection() {
                         </span>
                         <span className="text-[11px] font-semibold text-emerald-300">{stat.trend}</span>
                       </div>
-                      <p className="mt-4 text-3xl font-semibold tracking-tight text-white md:text-4xl">{stat.value}</p>
+                      <p className="mt-4 text-3xl font-semibold tracking-tight text-white md:text-4xl">
+                        <AnimatedStat value={stat.value} />
+                      </p>
                       <p className="mt-1.5 text-xs leading-5 text-slate-400">{stat.label}</p>
                     </div>
-                  </Reveal>
+                  </CardReveal>
                 );
               })}
             </div>
@@ -455,12 +498,9 @@ function ServicesSection() {
         {serviceCards.map((item, index) => {
           const Icon = serviceIcons[index];
           return (
-            <Reveal key={item.title} delay={index * 0.06}>
+            <CardReveal key={item.title} delay={index * 0.06}>
               <Link href={item.href} className="block h-full">
-                <motion.article
-                  whileHover={{ y: -4 }}
-                  className="glass-card group relative flex h-full flex-col overflow-hidden rounded-2xl p-6"
-                >
+                <article className="glass-card group relative flex h-full flex-col overflow-hidden rounded-2xl p-6">
                   <span className="absolute inset-x-0 top-0 h-0.5 bg-gradient-to-r from-violet-500 via-blue-500 to-cyan-400 opacity-0 transition group-hover:opacity-100" />
                   <div className="inline-flex h-12 w-12 items-center justify-center rounded-xl border border-cyan-300/25 bg-gradient-to-br from-blue-500/15 to-cyan-400/15 text-cyan-200">
                     <Icon size={22} />
@@ -482,9 +522,9 @@ function ServicesSection() {
                     Learn more
                     <ArrowRight size={15} />
                   </span>
-                </motion.article>
+                </article>
               </Link>
-            </Reveal>
+            </CardReveal>
           );
         })}
       </div>
@@ -551,7 +591,9 @@ function LocalSeoMattersSection() {
             {localSeoStats.map((stat) => (
               <div key={stat.title} className="px-6 py-7 md:px-7">
                 <div className="flex items-start justify-between gap-4">
-                  <p className="text-4xl font-semibold tracking-tight text-white md:text-[2.75rem]">{stat.value}</p>
+                  <p className="text-4xl font-semibold tracking-tight text-white md:text-[2.75rem]">
+                    <AnimatedStat value={stat.value} />
+                  </p>
                   <span className="shrink-0 rounded-full border border-white/10 bg-white/5 px-2.5 py-1 text-[10px] font-semibold uppercase tracking-[0.14em] text-slate-400">
                     {stat.source}
                   </span>
@@ -629,11 +671,8 @@ function ProcessSection() {
         {processSteps.map((step, index) => {
           const Icon = processIcons[index];
           return (
-            <Reveal key={step.title} delay={index * 0.08}>
-              <motion.article
-                whileHover={{ y: -4 }}
-                className="glass-card group relative flex h-full flex-col rounded-2xl p-6 text-center xl:text-left"
-              >
+            <CardReveal key={step.title} delay={index * 0.08}>
+              <article className="glass-card group relative flex h-full flex-col rounded-2xl p-6 text-center xl:text-left">
                 <div className="mx-auto flex items-center gap-3 xl:mx-0">
                   <span className="relative inline-flex h-12 w-12 items-center justify-center rounded-full border border-cyan-300/35 bg-slate-950 text-cyan-200">
                     <Icon size={20} />
@@ -644,8 +683,8 @@ function ProcessSection() {
                 </div>
                 <h3 className="mt-5 text-lg font-semibold text-white">{step.title}</h3>
                 <p className="mt-2 text-sm leading-6 text-slate-400">{step.description}</p>
-              </motion.article>
-            </Reveal>
+              </article>
+            </CardReveal>
           );
         })}
       </div>
@@ -670,15 +709,15 @@ function IndustriesSection() {
         {industryCards.map((industry, index) => {
           const Icon = industry.icon;
           return (
-            <Reveal key={industry.title} delay={index * 0.05}>
-              <article className="glass-card flex h-full min-h-[360px] flex-col rounded-2xl p-5">
+            <CardReveal key={industry.title} delay={index * 0.05}>
+              <article className="glass-card group flex h-full min-h-[360px] flex-col overflow-hidden rounded-2xl p-5">
                 <div className="mb-4 overflow-hidden rounded-2xl border border-slate-700/70">
                   <Image
                     src={industry.image}
                     alt={`${industry.title} local SEO visual`}
                     width={700}
                     height={420}
-                    className="h-36 w-full object-cover"
+                    className="brand-image-frame h-36 w-full object-cover"
                   />
                 </div>
                 <Icon size={20} className="text-cyan-300" />
@@ -692,7 +731,7 @@ function IndustriesSection() {
                   ))}
                 </div>
               </article>
-            </Reveal>
+            </CardReveal>
           );
         })}
       </div>
@@ -751,7 +790,9 @@ function PortfolioSection() {
                     key={stat.label}
                     className="rounded-2xl border border-slate-700/60 bg-slate-900/60 px-4 py-3 text-center"
                   >
-                    <p className="text-xl font-semibold text-cyan-200">{stat.value}</p>
+                    <p className="text-xl font-semibold text-cyan-200">
+                      <AnimatedStat value={stat.value} />
+                    </p>
                     <p className="mt-1 text-[11px] leading-4 text-slate-400">{stat.label}</p>
                   </div>
                 ))}
@@ -770,7 +811,7 @@ function PortfolioSection() {
 
       <div className="mt-6 grid gap-5 md:grid-cols-3">
         {featuredReports.map((item, index) => (
-          <Reveal key={item.id} delay={index * 0.08}>
+          <CardReveal key={item.id} delay={index * 0.08}>
             <Link
               href={`/${item.slug}`}
               className="group flex h-full flex-col overflow-hidden rounded-2xl border border-slate-700/60 bg-slate-950/70 transition hover:border-cyan-300/40 hover:shadow-[0_16px_40px_rgba(2,6,23,0.45)]"
@@ -800,7 +841,7 @@ function PortfolioSection() {
                 </span>
               </div>
             </Link>
-          </Reveal>
+          </CardReveal>
         ))}
       </div>
     </section>
@@ -887,7 +928,7 @@ function FinalCta() {
             <div className="mt-5 flex flex-wrap gap-3">
               <Link
                 href="/contact"
-                className="inline-flex items-center rounded-full bg-cyan-300 px-5 py-2.5 text-sm font-semibold text-slate-950 transition hover:bg-cyan-200"
+                className="brand-btn-primary inline-flex items-center rounded-full bg-cyan-300 px-5 py-2.5 text-sm font-semibold text-slate-950 transition hover:bg-cyan-200"
               >
                 Get My Free Pittsburgh SEO Proposal
               </Link>

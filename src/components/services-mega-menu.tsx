@@ -8,21 +8,36 @@ import { getCategoryById, serviceMegaMenuColumns, type ServiceCatalogItem } from
 
 const CLOSE_DELAY_MS = 220;
 
-function DropdownServiceLink({ item, onNavigate }: { item: ServiceCatalogItem; onNavigate?: () => void }) {
+function DropdownServiceLink({
+  item,
+  onNavigate,
+  compact = false,
+}: {
+  item: ServiceCatalogItem;
+  onNavigate?: () => void;
+  compact?: boolean;
+}) {
   const Icon = item.icon;
 
   return (
     <Link
       href={`/${item.slug}`}
       onClick={onNavigate}
-      className="group flex items-start gap-3 rounded-xl px-2.5 py-2.5 transition-colors hover:bg-slate-800"
+      className="group flex items-start gap-2.5 rounded-xl px-2 py-2 transition-colors hover:bg-slate-800"
     >
-      <span className="mt-0.5 inline-flex h-9 w-9 shrink-0 items-center justify-center rounded-lg border border-cyan-400/25 bg-cyan-500/10 text-cyan-300">
-        <Icon size={17} strokeWidth={2.2} />
+      <span
+        className={clsx(
+          "mt-0.5 inline-flex shrink-0 items-center justify-center rounded-lg border border-cyan-400/25 bg-cyan-500/10 text-cyan-300",
+          compact ? "h-8 w-8" : "h-9 w-9",
+        )}
+      >
+        <Icon size={compact ? 15 : 17} strokeWidth={2.2} />
       </span>
       <span className="min-w-0">
-        <span className="block text-sm font-semibold text-white group-hover:text-cyan-200">{item.title}</span>
-        {item.subtitle !== item.title ? (
+        <span className="block text-sm font-semibold leading-snug text-white group-hover:text-cyan-200">
+          {item.title}
+        </span>
+        {!compact && item.subtitle !== item.title ? (
           <span className="mt-0.5 block text-xs leading-5 text-slate-400">{item.subtitle}</span>
         ) : null}
       </span>
@@ -40,12 +55,19 @@ function DropdownCategoryBlock({
   const category = getCategoryById(categoryId);
   if (!category) return null;
 
+  const useTwoColumns = category.items.length >= 4;
+
   return (
     <div>
-      <p className="mb-3 text-[11px] font-bold uppercase tracking-[0.16em] text-cyan-300">{category.title}</p>
-      <div className="space-y-0.5">
+      <p className="mb-2.5 text-[11px] font-bold uppercase tracking-[0.16em] text-cyan-300">{category.title}</p>
+      <div className={clsx("gap-0.5", useTwoColumns ? "grid grid-cols-2 gap-x-2" : "space-y-0.5")}>
         {category.items.map((item) => (
-          <DropdownServiceLink key={item.slug} item={item} onNavigate={onNavigate} />
+          <DropdownServiceLink
+            key={item.slug}
+            item={item}
+            onNavigate={onNavigate}
+            compact={useTwoColumns}
+          />
         ))}
       </div>
     </div>
@@ -134,18 +156,17 @@ export function ServicesMegaMenu({ open, onOpen, onClose, active }: ServicesMega
 
       {open ? (
         <div
-          className="absolute left-1/2 top-full z-[100] w-[min(880px,calc(100vw-2rem))] -translate-x-1/2 pt-3"
+          className="absolute left-1/2 top-full z-[200] w-[min(1080px,calc(100vw-1.5rem))] -translate-x-1/2 pt-3 pb-2"
           onMouseEnter={handleEnter}
           onMouseLeave={scheduleClose}
         >
-          {/* pt-3 = invisible hover bridge (no margin gap) */}
           <div className="overflow-hidden rounded-2xl border border-slate-700 bg-[#0b1224] shadow-[0_20px_48px_rgba(0,0,0,0.65)]">
             <div className="grid md:grid-cols-3">
               {serviceMegaMenuColumns.map((column, columnIndex) => (
                 <div
                   key={columnIndex}
                   className={clsx(
-                    "space-y-6 p-5",
+                    "space-y-5 p-4 md:p-5",
                     columnIndex > 0 && "border-t border-slate-800 md:border-l md:border-t-0",
                   )}
                 >
@@ -153,7 +174,7 @@ export function ServicesMegaMenu({ open, onOpen, onClose, active }: ServicesMega
                     <div key={group.categoryId}>
                       <DropdownCategoryBlock categoryId={group.categoryId} onNavigate={handleNavigate} />
                       {groupIndex < column.groups.length - 1 ? (
-                        <div className="my-5 border-t border-slate-800" />
+                        <div className="my-4 border-t border-slate-800" />
                       ) : null}
                     </div>
                   ))}

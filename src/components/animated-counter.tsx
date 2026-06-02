@@ -2,6 +2,7 @@
 
 import { useInView } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
+import { repeatInView } from "@/lib/motion";
 
 export function AnimatedCounter({
   target,
@@ -12,10 +13,13 @@ export function AnimatedCounter({
 }) {
   const ref = useRef<HTMLSpanElement | null>(null);
   const [value, setValue] = useState(0);
-  const isInView = useInView(ref, { once: true });
+  const isInView = useInView(ref, repeatInView);
 
   useEffect(() => {
-    if (!isInView) return;
+    if (!isInView) {
+      setValue(0);
+      return;
+    }
     const duration = 1200;
     const start = performance.now();
     let frame = 0;
